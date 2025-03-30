@@ -1,31 +1,70 @@
-Descrição
-Implemente um sistema bancário que permita criar contas com informações como nome do titular, número da conta e saldo. O programa deve fornecer métodos para:
+# Sistema Bancário - Desafio 1
 
-Consultar o saldo.
-Realizar saques e depósitos.
-Garanta que os atributos da conta estejam encapsulados e sejam acessados apenas por métodos específicos.
+## Descrição
+Este desafio consiste em implementar um sistema bancário que permita criar contas com as seguintes informações:
+- Nome do titular
+- Número da conta
+- Saldo
 
-Entrada
-Consultar o saldo.
-Realizar saques e depósitos.
-Saída
-Saldo atualizado após cada operação ou mensagem de erro caso a operação não seja válida (ex.: Saque invalido: Saldo insuficiente), conforme tabela de exemplos.
+O programa deve fornecer métodos para:
+- Consultar o saldo.
+- Realizar saques e depósitos.
 
-Exemplos
-A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+**Importante:** Garanta que os atributos da conta estejam encapsulados e sejam acessados apenas por métodos específicos.
 
-Entrada	Saída
-João
-123
-500.00
-100.00 200.00	Saldo Atualizado: 600.00
-Maria
-456
-300.00
-400.00	Saque invalido: Saldo insuficiente
-Saldo Atual: 300.00
-Carlos
-789
-0.00
-50.00	Saque invalido: Saldo insuficiente
-Saldo Atual: 0.00
+---
+
+## Funcionalidades
+1. **Consultar Saldo**  
+   Permite verificar o saldo atual da conta.
+
+2. **Realizar Depósitos**  
+   Adiciona um valor ao saldo da conta.
+
+3. **Realizar Saques**  
+   Subtrai um valor do saldo da conta, desde que o saldo seja suficiente. Caso contrário, exibe uma mensagem de erro.
+
+---
+
+## Regras de Negócio
+- O saldo inicial da conta deve ser definido no momento da criação.
+- Não é permitido realizar saques que deixem o saldo negativo.
+- Todas as operações devem atualizar o saldo e exibir o resultado da operação.
+
+---
+
+## Entrada e Saída
+
+### Entrada
+1. Nome do titular.
+2. Número da conta.
+3. Saldo inicial.
+4. Operações (saques e/ou depósitos).
+
+### Saída
+- Saldo atualizado após cada operação.
+- Mensagem de erro caso a operação não seja válida (ex.: "Saque inválido: Saldo insuficiente").
+
+---
+
+## Exemplos de Entrada e Saída
+
+| Entrada                          | Saída                                   |
+|----------------------------------|-----------------------------------------|
+| João<br>123<br>500.00<br>100.00 200.00 | Saldo Atualizado: 600.00               |
+| Maria<br>456<br>300.00<br>400.00       | Saque inválido: Saldo insuficiente<br>Saldo Atual: 300.00 |
+| Carlos<br>789<br>0.00<br>50.00         | Saque inválido: Saldo insuficiente<br>Saldo Atual: 0.00   |
+
+---
+
+## Testes
+Certifique-se de testar o programa com os exemplos fornecidos acima e com outros casos possíveis, como:
+- Depósitos e saques consecutivos.
+- Saques com valores iguais ao saldo disponível.
+- Operações com valores inválidos (ex.: negativos).
+
+---
+
+## Observações
+- Utilize o conceito de **encapsulamento** para proteger os atributos da conta.
+- Certifique-se de que os métodos sejam claros e sigam boas práticas de programação.
